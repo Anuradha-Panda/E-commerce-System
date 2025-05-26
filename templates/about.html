@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+<style>
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* Left Content Styling */
+  .content {
+    padding: 20px;
+  }
+  
+  h2 {
+    
+   
+    color: #1765a6;
+  }
+  
+  p {
+    
+    color: black;
+    
+  }
+  
+  /* Right Image Styling */
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .image img {
+      width: 100%;
+    }
+  }
+</style>
+{% block content %}
+  <!-- breadcrumbs start -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4">
+          <h1>About</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- breadcrumbs end -->
+
+  <!-- container start -->
+  <div class="container">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side Content -->
+        <div class="col-lg-6 content">
+          <h2 >About Online Shopping</h2>
+          <p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet. It enables customers to browse a range of products, compare prices, and make secure purchases.</p>
+          <p>Customers can use desktops, laptops, tablets, or smartphones to shop online. The convenience of shopping from anywhere, at any time, has made online shopping increasingly popular.</p>
+        </div>
+
+        <!-- Right Side Image -->
+        <div class="col-lg-6 image">
+          <img src="/assets/img/2.jpg" alt="Online Shopping" />
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

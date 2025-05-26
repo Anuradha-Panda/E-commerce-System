@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  {% comment %} @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap"); {% endcomment %}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-main {
+  background: linear-gradient(to bottom, #00000024, #00000024),
+    url(https://res.cloudinary.com/dqifboxk5/image/upload/v1686209968/contact-us-2_y8zzx7.jpg)
+      no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper {
+  border-radius: 10px;
+  padding: 45px;
+  width: 40%;
+  box-shadow: 0 0 5px 5px #00000020;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff85;
+}
+
+@media screen and (max-width: 991px) {
+  .main-wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-wrapper {
+    width: 90%;
+  }
+}
+
+.form-head {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0px 0 25px;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-card {
+  position: relative;
+  width: 100%;
+}
+
+.form-input,
+.form-textarea {
+  padding: 20px 25px 15px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.form-input:valid,
+.form-input:focus,
+.form-textarea:valid,
+.form-textarea:focus {
+  border: 1px solid #515151;
+}
+
+.form-input:valid ~ .form-label,
+.form-input:focus ~ .form-label {
+  color: #515151;
+  top: 30%;
+  transform: translateY(-70%);
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.form-textarea:valid ~ .form-textarea-label,
+.form-textarea:focus ~ .form-textarea-label {
+  color: #515151;
+  top: 18%;
+  transform: translateY(-82%);
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus,
+.form-input:-webkit-autofill:active,
+.form-textarea:-webkit-autofill,
+.form-textarea:-webkit-autofill:hover,
+.form-textarea:-webkit-autofill:focus,
+.form-textarea:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-label,
+.form-textarea-label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.3s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.form-textarea-label {
+  top: 30%;
+  transform: translateY(-70%);
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0 0;
+}
+
+.btn-wrap button {
+  padding: 0 32px;
+  font-size: 18px;
+  line-height: 48px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0 0 5px 5px #00000020;
+}
+
+.btn-wrap button:hover {
+  border: 1px solid #000;
+  background: transparent;
+}
+.animated-text {
+  font-size: 2.5em;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+</style>
+    <!-- Sequence Modern Slider -->
+    <div id="da-slider" class="da-slider" style="top:1px; background-image: 
+    url('https://img.freepik.com/premium-photo/laptop-screen-with-shopping-cart-boxes-bags-symbolizing-online-shopping-convenience_924727-92449.jpg?ga=GA1.1.1472273937.1742388393&semt=ais_hybrid&w=740'); background-size: cover; background-position: center; height: 350px; position: relative; color: #fff;">
+
+  <div class="slider-tagline" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <h1 class="animated-text">Welcome to Our Online Shopping System</h1>
+  </div>
+
+  <nav class="da-arrows" style="position: absolute; width: 100%; top: 50%; transform: translateY(-50%); display: flex; justify-content: space-between; padding: 0 20px;">
+    <!-- Arrows commented as per your original code -->
+  </nav>
+    </div>
+    
+
+
+    <div class="container">
+      <div class="row mar-b-30">
+        <div class="col-md-12">
+          <div class="text-center feature-head wow fadeInDown">
+            <h1 class="" style="margin:30px;">
+              Welcome to Online Shopping System
+            </h1>
+
+          </div>
+
+
+          <div class="feature-box">
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+              <div class="feature-box-heading">
+                <em>
+                <img src="/assets/img/1.jpg" alt="" style="width:350px; height:180px;">
+
+                </em>
+                <h4>
+                  <b>Online Shopping System</b>
+                </h4>
+              </div>
+              <p class="text-center">
+                An online shop evokes the physical analogy of buying products or services at a regular "bricks-and-mortar" retailer or shopping center.
+              </p>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+              <div class="feature-box-heading">
+                <em>
+                  <img src="/assets/img/2.jpg" alt="" style="width:350px; height:180px;">
+                </em>
+                <h4>
+                  <b>Order Management System</b>
+                </h4>
+              </div>
+              <p class="text-center">
+                Online stores typically enable shoppers to use "search" features to find specific models, brands or items. Online customers must have access.
+              </p>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+              <div class="feature-box-heading">
+                <em>
+                  <img src="/assets/img/3.jpg" alt="" style="width:350px; height:180px;">
+                </em>
+                <h4>
+                  <b>Customer Management System</b>
+                </h4>
+              </div>
+              <p class="text-center">
+                A typical online store enables the customer to browse the firm's range of products and services, view photos or images of the products
+              </p>
+            </div>
+          </div>
+
+          <!--feature end-->
+        </div>
+      </div>
+    </div>
+
+
+    <!--property start-->
+    <div class="property gray-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 text-center wow fadeInLeft">
+            <img src="/assets/img/p3.jpg" alt="" style="height:335px">
+          </div>
+          <div class="col-lg-6 col-sm-6 wow fadeInRight">
+            <h1>
+              About Online Shopping System
+            </h1>
+            <hr>
+            <p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser. Consumers find a product of interest by visiting the website of the retailer directly or by searching among alternative vendors using a shopping search engine, which displays the same product's availability and pricing at different e-retailers. As of 2016, customers can shop online using a range of different computers and devices, including desktop computers, laptops, tablet computers and smartphones.</p>
+            <p>An online shop evokes the physical analogy of buying products or services at a regular "bricks-and-mortar" retailer or shopping center; the process is called business-to-consumer (B2C) online shopping. </p>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--property end-->
+
+
+    <div class="form-main">
+      <div class="main-wrapper">
+        <h2 class="form-head">Contact From</h2>
+        <form action="https://api.web3forms.com/submit"  method="POST" class="form-wrapper">
+          <input type="hidden" name="access_key" value="c3840363-22f4-4774-baf1-6e0a921db190">
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="text"
+              name="full_name"
+              required="required"
+            />
+            <label class="form-label" for="full_name">Full Name</label>
+          </div>
+
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              required="required"
+            />
+            <label class="form-label" for="email">Email</label>
+          </div>
+
+          <div class="form-card">
+            <input
+              class="form-input"
+              type="number"
+              name="phone_number"
+              required="required"
+            />
+            <label class="form-label" for="phone_number">Phone number</label>
+          </div>
+
+          <div class="form-card">
+            <textarea
+              class="form-textarea"
+              maxlength="420"
+              rows="3"
+              name="phone_number"
+              required="required"
+            ></textarea>
+            <label class="form-textarea-label" for="phone_number"
+              >Address</label
+            >
+          </div>
+          <div class="btn-wrap">
+            <button> Submit </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="/assets/js/parallax-slider/jquery.cslider.js"></script>
+	<script type="text/javascript">
+		  $(function() {
+
+			$('#da-slider').cslider({
+			  autoplay    : true,
+			  bgincrement : 100
+			});
+
+		  });
+	</script>
+  {% endblock content %}
+

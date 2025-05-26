@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  section.contact-infos{
+    background: linear-gradient(to right, rgb(224, 227, 230), rgb(118, 183, 240));
+  }
+</style>
+    <!--breadcrumbs start-->
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4">
+            <h1>
+              Contacts Us
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--breadcrumbs end-->
+
+
+
+    <!--container start-->
+    <div class="container" >
+
+
+      <div class="row" >
+        <div class="col-lg-5 col-sm-5 address" >
+          <section class="contact-infos">
+            <h4 class="title custom-font text-black">
+              ADDRESS
+            </h4>
+            <address>
+              M4/46, near water tank, Acharya Vihar
+              <br>
+              Bhubaneswar, Odisha
+              <br>
+              751013
+            </address>
+          </section>
+          <section class="contact-infos">
+            <h4 class="title custom-font text-black">
+              BUSINESS HOURS
+            </h4>
+            <p>
+              Monday - Friday 8am to 4pm
+              <br>
+              Saturday - 7am to 6pm
+              <br>
+              Sunday- Closed
+              <br>
+            </p>
+          </section>
+          <section class="contact-infos">
+            <h4>
+              TELEPHONE
+            </h4>
+            <p>
+              <i class="icon-phone">
+              </i>
+              0674 255656
+            </p>
+
+            <p>
+              <i class="icon-phone">
+              </i>
+              +91 - 7205455359
+            </p>
+
+          </section>
+        </div>
+        <div class="col-lg-7 col-sm-7 address" >
+          <h4>
+            Drop us a line so that we can hear from you
+          </h4>
+          <div class="contact-form" >
+            <form role="form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="c3840363-22f4-4774-baf1-6e0a921db190">
+              <div class="form-group">
+                <label for="name">
+                  Name
+                </label>
+                <input type="text" placeholder="" id="name" name="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="email">
+                  Email
+                </label>
+                <input type="text" placeholder="" id="email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  Phone
+                </label>
+                <input type="text" id="phone" name="number" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  Message
+                </label>
+                <textarea placeholder="" rows="5" class="form-control">
+                </textarea>
+              </div>
+              <button class="btn btn-info" type="submit">
+                Submit
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--container end-->
+
+    <!--google map start-->
+    {% comment %} <div class="contact-map">
+      <div id="map-canvas" style="width: 100%; height: 80px">
+      </div>
+    </div> {% endcomment %}
+    <!--google map end-->
+    
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.0944840992247!2d85.8306516!3d20.2963559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909d064ac0461%3A0xb99108e9f97fbfe2!2sLakshya%20Institute%20of%20Technology%20(LIT)!5e0!3m2!1sen!2sin!4v1743216875006!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <script>
+      $(document).ready(function() {
+        //Set the carousel options
+        $('#quote-carousel').carousel({
+          pause: true,
+          interval: 4000,
+        }
+                                     );
+      }
+                       );
+
+      //google map
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(51.508742,-0.120850);
+        var mapOptions = {
+          zoom: 5,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Contact'
+        }
+                                           );
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  {% endblock content %}
+
